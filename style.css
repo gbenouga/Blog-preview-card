@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --yellow: hsl(47, 88%, 63%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  display: grid;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--yellow);
+  padding: 1rem;
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 24rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--black);
+  box-shadow: 0.4rem 0.4rem var(--black);
+  transition: 0.3s;
+}
+
+.card_image img {
+  display: block;
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+.card_tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background-color: var(--yellow);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.card_date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.card_title {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0.8rem 1rem var(--black);
+}
+
+.card_title:hover {
+  color: var(--yellow);
+}
+
+.card_content {
+  margin-top: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--grey);
+}
+
+.card_footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card_footer img {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+
+.card_footer p {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .card {
+    padding: 1rem;
+    max-width: 20rem;
+    box-shadow: 0.3rem 0.3rem var(--black);
+  }
+
+  .card_title {
+    font-size: 1.1rem;
+  }
+
+  .card_content {
+    font-size: 0.9rem;
+  }
+
+  .card_tag, .card_date, .card_footer p {
+    font-size: 0.8rem;
+  }
+
+  .card_footer img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* .card:hover {
+    box-shadow: 0.6rem 1rem var(--black);
+  }
+  
+  .card_title:hover {
+    color: var(--yellow);
+  } */
+}
